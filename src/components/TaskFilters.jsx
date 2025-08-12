@@ -11,11 +11,11 @@ const TaskFilters = ({
   setSortOrder
 }) => {
   const dateOptions = [
-    { value: 'all', label: 'All Dates' },
+    { value: 'all', label: 'All' },
     { value: 'today', label: 'Today' },
     { value: 'tomorrow', label: 'Tomorrow' },
-    { value: 'week', label: 'This Week' },
-    { value: 'month', label: 'This Month' }
+    { value: 'week', label: 'Week' },
+    { value: 'month', label: 'Month' }
   ]
 
   const priorityOptions = [
@@ -26,8 +26,8 @@ const TaskFilters = ({
   ]
 
   const sortOptions = [
-    { value: 'newest', label: 'Newest First' },
-    { value: 'oldest', label: 'Oldest First' }
+    { value: 'newest', label: 'Newest' },
+    { value: 'oldest', label: 'Oldest' }
   ]
 
   const SelectField = ({ value, onChange, options, className = "" }) => {
@@ -38,7 +38,7 @@ const TaskFilters = ({
           {/* Button */}
           <Listbox.Button
             className="w-full flex justify-between items-center bg-white border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700
-                      hover:border-amber-300 transition-colors cursor-pointer "
+                      hover:border-amber-300 transition-colors cursor-pointer"
           >
             <span>
               {options.find((option) => option.value === value)?.label || "Select"}
